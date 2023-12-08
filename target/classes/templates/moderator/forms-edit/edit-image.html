@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div th:insert="~{moderator/_fragments/header :: header}"></div>
+
+<div class="container">
+    <h2 class="h2">Image Edit</h2>
+</div>
+
+<div class="container">
+    <form th:action="@{/moderator/images/edit}" method="post" th:object="${image}" class="form">
+        <input type="hidden" th:field="*{id}"/>
+
+        <div>
+            <label for="url">Image Title:</label>
+            <input type="text" id="url" th:field="*{url}" required="required"/>
+        </div>
+
+        <div>
+            <button id="submit" type="submit">Update</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

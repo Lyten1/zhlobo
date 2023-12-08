@@ -1,0 +1,26 @@
+<div th:fragment="header"> <!--class="fixed-top"-->
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a th:href="home" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <h3 class="h3">Zhlobo</h3>
+      </a>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a th:href="@{'/moderator/balances'}" class="nav-link px-2">Balances</a></li>
+      <li><a th:href="@{'/moderator/cities'}" class="nav-link px-2">Cities</a></li>
+      <li><a th:href="@{'/moderator/couriers'}" class="nav-link px-2">Couriers</a></li>
+      <li><a th:href="@{'/moderator/customers'}" class="nav-link px-2">Customers</a></li>
+      <li><a th:href="@{'/moderator/images'}" class="nav-link px-2">Images</a></li>
+      <li><a th:href="@{'/moderator/orders'}" class="nav-link px-2">Orders</a></li>
+      <li><a th:href="@{'/moderator/products'}" class="nav-link px-2">Products</a></li>
+      <li><a th:href="@{'/moderator/products-quantity'}" class="nav-link px-2">Products quantity</a></li>
+      <li><a th:href="@{'/moderator/sellers'}" class="nav-link px-2">Sellers</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <button type="button" class="btn btn-outline-primary me-2">Login</button>
+      <a th:href="register" class="btn btn-primary">Sign-up</a>
+    </div>
+  </div>
+</div>
